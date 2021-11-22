@@ -27,6 +27,7 @@ onEvent("submitQuestion", "click", function( ) { appendItem(userAnswers, getText
 onEvent("nextQuestion", "click", function( ) {
 console.log(questionCurrent)); if (questionCurrent == slider) {
 console.log(slider);
+console.log("1-4");
 setScreen("score");
 var indexes = checkAnswers(userAnswers, answers)[1];
 setText("scoreBox", checkAnswers(userAnswers, answers)[0] + ("/" + slider)); for (var i = 0; i < indexes.length; i++) {
