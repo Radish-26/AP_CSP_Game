@@ -1,3 +1,4 @@
+// creates variables 
 var presidentNames = getColumn("US Presidents", "President"); var presidentOrder = getColumn("US Presidents", "Presidency"); var userAnswers = [];
 var wrongQuestions = [];
 var wrongAnswers = [];
@@ -5,7 +6,7 @@ var questions = [];
 var answers = [];
 var questionCurrent = 0;
 var slider = getNumber("questionSlider");
-//The list of president names and their presidencyies are used later in the code to generate // lists of quiz questions and answers
+//The list of president names and their presidencies are used later in the code to generate // lists of quiz questions and answers
 generateQuestions();
 questions = shufflequestions(questions, answers)[0];
 answers = shufflequestions(questions, answers)[1];
@@ -49,11 +50,11 @@ var currentIndex = questionArray.length, temporaryValue, randomIndex, temporaryV
 // While there remain elements to shuffle... while (0 !== currentIndex) {
 // Pick a remaining element...
 randomIndex = Math.floor(Math.random() * currentIndex); currentIndex -= 1;
-// And swap it with the current element.
+// And swap it with the current element
 temporaryValue = questionArray[currentIndex];
 questionArray[currentIndex] = questionArray[randomIndex];
 questionArray[randomIndex] = temporaryValue;
-//This code was added so that the answersArray would shuffle in the same way as the questions arrray temporaryValue1 = answerArray[currentIndex];
+//AnswersArray shuffles in the same way as the questions arrray temporaryValue1 = answerArray[currentIndex];
 answerArray[currentIndex] = answerArray[randomIndex];
 answerArray[randomIndex] = temporaryValue1;
 }
@@ -64,6 +65,7 @@ for (var i = 0; i < incorrectanswerslist.length; i++) {
 wrongs = wrongs + (("\n" + incorrectquestionslist[i]) + (" " + incorrectanswerslist[i])); }
 return wrongs ;
 }
+
 function checkAnswers(User, Key) {
 var score = 0;
 var questionsWrong = [];
@@ -72,4 +74,5 @@ if (User[i] == Key[i] ) { score ++;
 } else { appendItem(questionsWrong, i);
 } }
 var total = [score, questionsWrong];
+  
 return total; }
