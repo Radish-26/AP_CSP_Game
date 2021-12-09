@@ -1,4 +1,4 @@
-// creates variables 
+// initializes variables 
 var presidentNames = getColumn("US Presidents", "President"); var presidentOrder = getColumn("US Presidents", "Presidency"); var userAnswers = [];
 var wrongQuestions = [];
 var wrongAnswers = [];
